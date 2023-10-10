@@ -22,13 +22,14 @@ Invoke-Command -Session $sess {
     choco install 7zip -y
 
     # Install MariaDBD
-	choco install mariadb.install
+	choco install mariadb.install -y
     choco install mariadb
  
     # Install iis 
     choco install iis.administration -y
 }
 
+Install-WindowsFeature -name Web-Server -IncludeManagementTools #install IIS
 
 
 Remove-PSSession -Session $sess
