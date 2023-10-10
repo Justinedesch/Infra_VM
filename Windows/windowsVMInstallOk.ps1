@@ -21,9 +21,10 @@ Invoke-Command -Session $sess {
     # Install 7-zip
     choco install 7zip -y
 
-    # Install My-SQL
-     choco install mysql 
-
+    # Install MariaDBD
+	choco install mariadb.install
+    choco install mariadb
+ 
     # Install iis 
     choco install iis.administration -y
 }
